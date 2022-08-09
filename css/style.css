@@ -1,9 +1,10 @@
 :root{
     --blanco: #ffffff;
     --oscuro: #212121;
-    --primario: #ffc107;
-    --secundario: #0097a7;
-    --gris: #757575;
+    --primario: #696faa;
+    --hover: #c0bee5;
+    --secundario: #483a83;
+    --celeste: #009cff;
     --grisClaro: #dfe9f3;
 }
 
@@ -26,7 +27,7 @@ html{
 body{
     font-size: 16px; /* 1rem=10px */
     font-family: 'Krub', sans-serif;
-    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
+    background-image: linear-gradient(to top, var(--secundario) 0%, var(--blanco) 80%);
 }
 .contenedor{
     max-width: 120rem;
@@ -48,7 +49,7 @@ body{
 }
 @media (min-width: 768px) {
     .boton{
-        width: auto;
+        width: 18rem;
     }
 }
 .boton:hover{
@@ -66,6 +67,8 @@ body{
 /* Tipografia */
 h1{
     font-size: 3.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
 }
 h2{
     font-size: 2.8rem;
@@ -78,8 +81,14 @@ h1, h2, h3{
 }
 
 /* Titulos */
-.titulo span{
+.span{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+span{
     font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
 }
 /* Utilidades */
 .w-sm-100{
@@ -87,16 +96,21 @@ h1, h2, h3{
 }
 @media (min-width: 768px) {
     .w-sm-100{
-        width: auto;
+        width: 18rem;
+    }
+    .boton-enviar{
+        margin-top: 5rem !important;
     }
 }
 .flex{
     display: flex;
 }
-.alinear-derecha{
-    justify-content: flex-end;
+.alinear-centro{
+    justify-content: center;
 }
-
+.boton-enviar{
+    margin-top: 0rem;
+}
 
 /* Navegacion Principal */
 .nav-bg{
@@ -122,13 +136,13 @@ h1, h2, h3{
     padding: 1rem;
 }
 .navegacion-principal a:hover{
-    background-color: var(--primario);
+    background-color: var(--hover);
     color: var(--oscuro);
 }
 
 /* Hero */
 .hero{
-    background-image: url(../img/hero.jpg);
+    background-image: url(../img/escritorio.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
@@ -167,7 +181,7 @@ h1, h2, h3{
     align-items: center;
 }
 .servicio h3{
-    color: var(--secundario);
+    color: var(--celeste);
     font-weight: normal;
 }
 .servicio p{
@@ -186,7 +200,7 @@ h1, h2, h3{
 
 /* Contacto */
 .formulario{
-    background-color: var(--gris);
+    background-color: var(--primario);
     width: min(60rem, 100%);  /*Utiliza el valor mas pequeño*/
     margin: 0 auto;
     padding: 2rem;
@@ -197,7 +211,7 @@ h1, h2, h3{
     border: none;
 }
 .formulario legend{
-    color: var(--primario);
+    color: var(--blanco);
     text-align: center;
     font-size: 1.8rem;
     text-transform: uppercase;
@@ -237,5 +251,6 @@ h1, h2, h3{
 /* Footer */
 .footer{
     text-align: center;
+    color: var(--grisClaro);
 }
 
